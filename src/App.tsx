@@ -6,7 +6,6 @@ import { useState } from "react"
 import { Genre } from "./hooks/useGenres"
 import PlatformSelector from "./components/PlatformSelector"
 import { Platform } from "./hooks/useGames"
-import { getAdapter } from "axios"
 import SortSelector from "./components/SortSelector"
 
 export interface GameQuery {
