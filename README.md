@@ -6,6 +6,7 @@
 - Experiemented with new UI library called [Chakra UI](https://v2.chakra-ui.com/) and it is really amazing to work with it.
 - Created responsive UI layouts to fit different screen resolutions like Tablet, Mobile, Desktop.
 - Users also has the ability to switch between dark and light themes
+- Search feature is also implemented where users can search a game by its title
 - The UI page contains multiple game cards which are fetched from Rawg API
 - The games can be filtered based on the platform, genre
 - The games can also be ordered by different metrics
