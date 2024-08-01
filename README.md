@@ -28,7 +28,7 @@
 
 ### Desktop
 
-- Inital screen with Games as title
+- Initial screen with Games as title
 
 ![image](https://github.com/user-attachments/assets/0b531968-7d30-4784-a0a0-2a70ce9a76d6)
 
