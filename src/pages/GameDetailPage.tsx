@@ -1,12 +1,18 @@
 import { useParams } from "react-router-dom"
 import useGame from "../hooks/useGame"
-import { Heading, Spinner, Text } from "@chakra-ui/react"
+import { Button, Heading, Spinner, Text } from "@chakra-ui/react"
+import { useState } from "react"
+import ExpandableText from "../components/ExpandableText"
 
 const GameDetailPage = () => {
   const { slug } = useParams()
-  console.log(slug)
-
+  const [showLess, setShowLess] = useState(true)
   const { data: game, error, isLoading } = useGame(slug!)
+
+  const description = showLess
+    ? game?.description_raw.substring(300) + "..."
+    : game?.description_raw
+  const buttonText = showLess ? "Show more" : "Show Less"
 
   if (isLoading) return <Spinner />
   if (error || !game) throw error
@@ -15,7 +21,7 @@ const GameDetailPage = () => {
   return (
     <>
       <Heading>{game.name}</Heading>
-      <Text>{game.description_raw}</Text>
+      <ExpandableText>{game.description_raw}</ExpandableText>
     </>
   )
 }
